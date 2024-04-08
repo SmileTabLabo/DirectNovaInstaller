@@ -1,4 +1,4 @@
-# App Direct Installer
+# Nova Direct Installer
 
 ---
 

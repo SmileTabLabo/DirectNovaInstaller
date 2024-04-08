@@ -1,4 +1,4 @@
-# App Direct Installer の使い方
+# Nova Direct Installer の使い方
 
 ---
 
@@ -27,14 +27,14 @@
 > - 02.02.000
 > - 02.04.000
 >
-> それ以前のビルドでは署名チェック機能が実装されているため、AppDirectInstaller を使用する事は出来ません。
+> それ以前のビルドでは署名チェック機能が実装されているため、NovaDirectInstaller を使用する事は出来ません。
 - microSDカード
 - SDカードを読み書き可能な端末
 
 ## セットアップ
 
 ⒈ 次のリンクを開き､ ファイルとして保存します｡  
-[**test_environment_info.xml**](https://gh.s1204.me/AppDirectInstaller/test_environment_info.xml)
+[**test_environment_info.xml**](https://gh.s1204.me/NovaDirectInstaller/test_environment_info.xml)
 
 ⒉ SDカードの最上層に､ `test_environment_info.xml` をコピーします｡  
 
@@ -42,7 +42,7 @@
 
 ⒋ ホーム画面の､ スタートボタンを押します｡
 
-[![](https://github.com/s1204IT/AppDirectInstaller/assets/52069677/7b570b1d-60b5-4186-8080-4fbdde7e6e9c)](#)
+[![](https://github.com/s1204IT/NovaDirectInstaller/assets/52069677/7b570b1d-60b5-4186-8080-4fbdde7e6e9c)](#)
 
 ⒌ ｢<kbd><b>わかった</b></kbd>｣ を押します｡
 
@@ -59,12 +59,11 @@
 
 ⒎ 正常に続行すると以下のような画面が出ます｡
 
-[![](https://github.com/s1204IT/AppDirectInstaller/assets/52069677/8b883890-c60a-4043-9636-ea90e6730516)](#)
+[![](https://github.com/s1204IT/NovaDirectInstaller/assets/52069677/8b883890-c60a-4043-9636-ea90e6730516)](#)
 **画面には触れずに** そのままお待ちください｡  
 内部処理が終了後､ 自動的に再起動されます｡
 
-⒏ 再起動後､ アプリストアが起動します。  
-**Nova Launcher** と **カスタマイズツール** をインストールしてください。
+⒏ 再起動後､ **Nova Launcher** が起動します。
 
 > [!WARNING]
 > チャレンジパッド２ / ３の場合､ 起動時に｢`ホームアプリを選択`｣のポップアップが出るので､ ｢<kbd><b>配布アプリ</b></kbd>｣を選択後､ ｢<kbd><b>常時</b></kbd>｣を選択して続行します｡
