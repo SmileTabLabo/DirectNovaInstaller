@@ -8,9 +8,11 @@ import android.os.Bundle;
 import android.provider.Settings;
 
 public class DchaStateChanger extends Activity {
+
     private void setDchaState(int value) {
         Settings.System.putInt(getContentResolver(), "dcha_state", value);
     }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,4 +27,5 @@ public class DchaStateChanger extends Activity {
             startActivity(new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS, Uri.parse("package:" + getPackageName())).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
         }
     }
+
 }

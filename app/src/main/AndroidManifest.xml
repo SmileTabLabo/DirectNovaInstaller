@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:label="App Direct Installer"
+        android:label="Nova Direct Installer"
         android:theme="@android:style/Theme.NoDisplay"
         tools:ignore="MissingApplicationIcon">
 

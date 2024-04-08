@@ -30,21 +30,6 @@ public class LoginSettingActivity extends Activity {
 
     IDchaService mDchaService;
 
-    // TODO: 機能修正
-    private String copyAssetsFile(String model) throws IOException {
-        final String ASSET_APK = model + APK_EXT;
-        InputStream inputStream = getAssets().open(ASSET_APK);
-        FileOutputStream fileOutputStream = openFileOutput(ASSET_APK, MODE_PRIVATE);
-        byte[] buffer = new byte[1024];
-        int length;
-        while ((length = inputStream.read(buffer)) >= 0) {
-            fileOutputStream.write(buffer, 0, length);
-        }
-        fileOutputStream.close();
-        inputStream.close();
-        return getFilesDir() + ASSET_APK;
-    }
-
     @Deprecated
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,13 +64,7 @@ public class LoginSettingActivity extends Activity {
                     mDchaService.hideNavigationBar(false);
 
                     // インストール部分 //
-                    //mDchaService.installApp(copyAssetsFile("ALL"), INSTALL_FLAG);
-                    mDchaService.installApp("/sdcard/ALL.apk", INSTALL_FLAG);
-                    if (CT_MODEL.equals(CT3) && !Build.ID.startsWith("01")) {
-                        mDchaService.installApp(copyAssetsFile("CT3"), INSTALL_FLAG);
-                    } else if (CT_MODEL.equals(CTX) || CT_MODEL.equals(CTZ)) {
-                        mDchaService.installApp(copyAssetsFile("CTX"), INSTALL_FLAG);
-                    }
+                    // TODO: インストール機能の実装(HTTP)
 
                     // 規定ランチャーの関連付けを解除
                     mDchaService.clearDefaultPreferredApp(LAUNCHER2);
@@ -96,7 +75,7 @@ public class LoginSettingActivity extends Activity {
                     mDchaService.rebootPad(REBOOT_DEVICE, null);
                     // 自己アンインストール
                     mDchaService.uninstallApp(getPackageName(), INSTALL_FLAG+1);
-                } catch (RemoteException | IOException ignored) {
+                } catch (RemoteException ignored) {
                 }
                 unbindService(this);
             }

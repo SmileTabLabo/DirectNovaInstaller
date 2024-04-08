@@ -7,9 +7,7 @@
 # Gradle Build
 /build/
 /app/build/
-/CT?/build/
+/dev/build/
 # Android Studio Signing APK
 /app/release/
-/CT?/release/
-# Bundled APK
-/app/src/main/assets/*.apk
+/dev/release/

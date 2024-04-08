@@ -7,9 +7,9 @@ android {
     compileSdk 34
 
     defaultConfig {
-        minSdk 28
+        minSdk 24
         //noinspection ExpiredTargetSdkVersion
-        targetSdk 28
+        targetSdk 22
         versionCode 1
         versionName "1.0.0"
         proguardFiles += '../app/proguard-rules.pro'
@@ -25,12 +25,10 @@ android {
     }
 
     buildTypes {
-        debug {
+        all {
             signingConfig signingConfigs.android
-            minifyEnabled false
         }
         release {
-            signingConfig signingConfigs.android
             minifyEnabled true
             shrinkResources true
         }
@@ -39,5 +37,4 @@ android {
 
 dependencies {
     compileOnly files('../app/libs/BenesseExtension.jar')
-    implementation files('../app/libs/DchaService.jar')
 }
